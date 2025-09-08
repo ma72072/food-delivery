@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodie Express</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1>🍴 Foodie Express</h1>
+    <ul>
+      <li><a href="#" onclick="showCategory('veg')">Veg</a></li>
+      <li><a href="#" onclick="showCategory('nonveg')">Non-Veg</a></li>
+      <li><a href="#" onclick="showCategory('fastfood')">Fast Food</a></li>
+      <li><a href="#" onclick="showCategory('breads')">Indian Breads</a></li>
+      <li><a href="#" onclick="showCategory('drinks')">Cold Drinks</a></li>
+      <li>
+        <a href="#" onclick="showCategory('cart')">🛒 Cart (<span id="cart-count">0</span>)</a>
+      </li>
+      <li>
+        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- VEG SECTION -->
+  <section id="veg" class="category">
+    <h2>🥗 Veg Dishes</h2>
+    <div class="menu">
+      <div class="food-card">
+        <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2020/01/paneer-butter-masala-5.jpg" alt="Paneer Butter Masala">
+        <h3>Paneer Butter Masala</h3>
+        <p>₹150</p>
+        <button onclick="addToCart('Paneer Butter Masala', 180)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="https://cdn.dotpe.in/longtail/store-items/1088605/WoW2WsnV.jpeg" alt="Mix Veg Curry">
+        <h3>Mix Veg Curry</h3>
+        <p>₹100</p>
+        <button onclick="addToCart('Mix Veg Curry', 150)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="https://www.sharmispassions.com/wp-content/uploads/2012/05/dal-makhani7.jpg" alt="Dal Makhani">
+        <h3>Dal Makhani</h3>
+        <p>₹120</p>
+        <button onclick="addToCart('Dal Makhani', 160)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="https://i.ytimg.com/vi/wAv-mFU7eus/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD4QzhyIzsn3bEMvu2NXaXRKS7qgg" alt="Chole Bhature">
+        <h3>Chole Bhature</h3>
+        <p>₹70</p>
+        <button onclick="addToCart('Chole Bhature', 130)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBtJDt2MeHBLMUPFdNxxPxmcZNDqTOkffC5kSoQ5devupArTeBiHAUfALLYcUVGJ-deEc&usqp=CAU" alt="Palak Paneer">
+        <h3>Palak Paneer</h3>
+        <p>₹160</p>
+        <button onclick="addToCart('Palak Paneer', 170)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- NON VEG SECTION -->
+  <section id="nonveg" class="category">
+    <h2>🍗 Non-Veg Dishes</h2>
+    <div class="menu">
+      <div class="food-card">
+        <img src="https://png.pngtree.com/thumb_back/fh260/background/20240204/pngtree-top-view-of-chicken-biryani-indian-food-delicious-ramadan-iftar-meal-image_15585911.png" alt="Chicken Biryani">
+        <h3>Chicken Biryani</h3>
+        <p>₹200</p>
+        <button onclick="addToCart('Chicken Biryani', 220)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="https://img-global.cpcdn.com/recipes/cde0f5d52a23368e/680x781cq80/hyderabadi-chicken-masala-recipe-main-photo.jpg" alt="Chicken Curry">
+        <h3>Chicken Curry</h3>
+        <p>₹150</p>
+        <button onclick="addToCart('Chicken Curry', 200)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="https://www.chompslurrpburp.com/wp-content/uploads/2022/11/butter-chicken-2.jpg" alt="Butter Chicken">
+        <h3>Butter Chicken</h3>
+        <p>₹170</p>
+        <button onclick="addToCart('Butter Chicken', 250)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRrhW5YxVHXBuWenKoEk6pJzRDFQl6_Z_Z0w&s" alt="Tandoori Chicken">
+        <h3>Tandoori Chicken</h3>
+        <p>₹180</p>
+        <button onclick="addToCart('Tandoori Chicken', 280)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="https://happietrio.com/wp-content/uploads/2016/02/coastalfishfry1.jpg" alt="Fish Fry">
+        <h3>Fish Fry</h3>
+        <p>₹140</p>
+        <button onclick="addToCart('Fish Fry', 300)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAST FOOD SECTION -->
+  <section id="fastfood" class="category">
+    <h2>🍔 Fast Food</h2>
+    <div class="menu">
+      <div class="food-card">
+        <img src="https://easyindiancookbook.com/wp-content/uploads/2023/06/aloo-tikki-burger-1.jpg" alt="Cheese Burger">
+        <h3>Cheese Burger</h3>
+        <p>₹60</p>
+        <button onclick="addToCart('Cheese Burger', 120)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="https://ooni.com/cdn/shop/articles/20220211142347-margherita-9920_ba86be55-674e-4f35-8094-2067ab41a671.jpg?v=1737104576" alt="Pizza">
+        <h3>Margherita Pizza</h3>
+        <p>₹99</p>
+        <button onclick="addToCart('Margherita Pizza', 250)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="https://www.recipetineats.com/tachyon/2022/09/Crispy-Fries_8.jpg" alt="French Fries">
+        <h3>French Fries</h3>
+        <p>₹60</p>
+        <button onclick="addToCart('French Fries', 90)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWBf3i65oVe-ajHNhkNF8_-6Th9iM2frEnb3dumGmE4K7xJCPxohY68EIFa34bU52yifs&usqp=CAU" alt="Momos">
+        <h3>Veg Momos</h3>
+        <p>₹99</p>
+        <button onclick="addToCart('Veg Momos', 110)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="https://www.licious.in/blog/wp-content/uploads/2016/07/Hot-Dogs.jpg" alt="Hot Dog">
+        <h3>Hot Dog</h3>
+        <p>₹70</p>
+        <button onclick="addToCart('Hot Dog', 140)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDIAN BREADS SECTION -->
+  <section id="breads" class="category">
+    <h2>🍞 Indian Breads</h2>
+    <div class="menu">
+      <div class="food-card">
+        <img src="https://t3.ftcdn.net/jpg/08/95/50/04/360_F_895500474_IDUMxbOGEBn29tyPyjG8oLEEWlK8ZlOg.jpg" alt="Butter Naan">
+        <h3>Butter Naan</h3>
+        <p>₹40</p>
+        <button onclick="addToCart('Butter Naan', 40)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLCEUqKtf5bSCp9KDUnJYo6kvXGvBTSeyz6dQw3kzqd7rWUX5qnmQng0MQfrOJCXDh4Ro&usqp=CAU" alt="Garlic Naan">
+        <h3>Garlic Naan</h3>
+        <p>₹50</p>
+        <button onclick="addToCart('Garlic Naan', 50)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="https://www.cookwithkushi.com/wp-content/uploads/2020/09/IMG_5244_.jpg" alt="Rumali Roti">
+        <h3>Rumali Roti</h3>
+        <p>₹30</p>
+        <button onclick="addToCart('Rumali Roti', 30)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="https://www.dhlindustries.com/wp-content/uploads/2020/04/Tandoori-Roti-scaled.jpg" alt="Tandoori Roti">
+        <h3>Tandoori Roti</h3>
+        <p>₹35</p>
+        <button onclick="addToCart('Tandoori Roti', 35)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLD DRINKS SECTION -->
+  <section id="drinks" class="category">
+    <h2>🥤 Cold Drinks</h2>
+    <div class="menu">
+      <div class="food-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSejod8zJVHeXT0qKU1XA-xwpZsBau0G7jTQGQgQP39yAyjbLZ90YZTfjOq6ONgZKcwClo&usqp=CAU" alt="Cold Coffee">
+        <h3>Cold Coffee</h3>
+        <p>₹80</p>
+        <button onclick="addToCart('Cold Coffee', 80)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Coca_Cola_Marketing_Strategy_2022.jpg" alt="Coca Cola">
+        <h3>Coca Cola</h3>
+        <p>₹40</p>
+        <button onclick="addToCart('Coca Cola', 40)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="https://driftbasket.com/wp-content/uploads/2024/04/pepsi-BLUE-TITAN-0_33L-SRB_600_600px-e1713358658329.jpg" alt="Pepsi">
+        <h3>Pepsi</h3>
+        <p>₹40</p>
+        <button onclick="addToCart('Pepsi', 40)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="https://www.shutterstock.com/image-photo/paulobrazil-february-04-2024-sprite-260nw-2421388827.jpg" alt="Sprite">
+        <h3>Sprite</h3>
+        <p>₹40</p>
+        <button onclick="addToCart('Sprite', 40)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/lemonade-with-iced-tea-cubes-644aa6e2be528.jpg?crop=1.00xw:0.669xh;0,0.130xh&resize=1200:*" alt="Lemon Iced Tea">
+        <h3>Lemon Iced Tea</h3>
+        <p>₹60</p>
+        <button onclick="addToCart('Lemon Iced Tea', 60)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="https://sattvakitchen.com/wp-content/uploads/2024/05/SWEET-LIME-SODA-shutterstock_2309599743-copy-Copy-copy.jpg" alt="Fresh Lime Soda">
+        <h3>Fresh Lime Soda</h3>
+        <p>₹50</p>
+        <button onclick="addToCart('Fresh Lime Soda', 50)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CART SECTION -->
+  <section id="cart" class="category">
+    <h2>🛒 Your Cart</h2>
+    <div id="cart-items"></div>
+    <p><strong>Total: ₹<span id="total">0</span></strong></p>
+    <button class="checkout" onclick="checkout()">Checkout</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>     
+
+
